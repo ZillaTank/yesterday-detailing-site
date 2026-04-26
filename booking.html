@@ -74,25 +74,29 @@
 
       <section class="contact-card">
         <h2>Booking Form</h2>
-        <form action="mailto:yesterday.detailing@gmail.com" method="post" enctype="text/plain">
+        <form action="https://formsubmit.co/yesterday.detailing@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New YesterDay Car Detailing booking request">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_autoresponse" value="Thanks for requesting a detail with YesterDay Car Detailing. We received your booking request and will reach out soon to confirm availability.">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
           <div class="form-row">
             <label>
               Name
-              <input name="Name" autocomplete="name" required>
+              <input name="name" autocomplete="name" required>
             </label>
             <label>
               Phone
-              <input name="Phone" type="tel" autocomplete="tel" required>
+              <input name="phone" type="tel" autocomplete="tel" required>
             </label>
           </div>
           <label>
             Email
-            <input name="Email" type="email" autocomplete="email">
+            <input name="email" type="email" autocomplete="email" required>
           </label>
           <div class="form-row">
             <label>
               Service
-              <select name="Service" required>
+              <select name="service" required>
                 <option value="">Choose one</option>
                 <option>Interior Detail</option>
                 <option>Exterior Detail</option>
@@ -103,15 +107,15 @@
             </label>
             <label>
               Preferred Date
-              <input name="Preferred Date" type="date">
+              <input name="preferred_date" type="date">
             </label>
           </div>
           <label>
             Vehicle and Notes
-            <textarea name="Vehicle and Notes" placeholder="Vehicle make/model, condition, location, and any details you want YesterDay to know."></textarea>
+            <textarea name="vehicle_and_notes" placeholder="Vehicle make/model, condition, location, and any details you want YesterDay to know."></textarea>
           </label>
           <button class="btn" type="submit">Send Request</button>
-          <p class="note">This opens your email app with the booking details ready to send.</p>
+          <p class="note">This sends the booking request to YesterDay and emails the customer a confirmation.</p>
         </form>
       </section>
     </section>
