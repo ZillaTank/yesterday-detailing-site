@@ -639,6 +639,32 @@ a.card:focus-visible * {
   text-decoration-line: none !important;
 }
 
+.service-card {
+  position: relative;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.card-hitbox {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  text-decoration: none;
+}
+
+.service-card:hover,
+.service-card:focus-within {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.card-hitbox:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
 .card h3,
 .price-card h3,
 .contact-card h2 {
