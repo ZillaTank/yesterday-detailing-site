@@ -284,12 +284,11 @@ img {
 }
 
 .stat {
+  position: relative;
   background: var(--surface-strong);
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 14px;
-  text-decoration: none !important;
-  text-decoration-line: none !important;
   transition:
     border-color 0.2s ease,
     background 0.2s ease,
@@ -297,20 +296,23 @@ img {
 }
 
 .stat:hover,
-.stat:focus-visible {
+.stat:focus-within {
   background: var(--surface);
   border-color: var(--accent);
   transform: translateY(-2px);
-  text-decoration: none !important;
-  text-decoration-line: none !important;
-  outline: none;
 }
 
-.stat *,
-.stat:hover *,
-.stat:focus-visible * {
-  text-decoration: none !important;
-  text-decoration-line: none !important;
+.stat-hitbox {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  text-decoration: none;
+}
+
+.stat-hitbox:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
 }
 
 .stat strong {
