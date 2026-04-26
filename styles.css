@@ -288,6 +288,19 @@ img {
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 14px;
+  text-decoration: none;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.stat:hover,
+.stat:focus-visible {
+  background: var(--surface);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  outline: none;
 }
 
 .stat strong {
