@@ -762,14 +762,42 @@ textarea {
 @media (max-width: 900px) {
   .nav-wrap {
     min-height: auto;
-    padding: 14px 0;
-    align-items: flex-start;
-    flex-direction: column;
+    padding: 12px 0;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .brand img {
+    height: 48px;
+  }
+
+  .main-nav {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 6px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    scrollbar-width: none;
+  }
+
+  .main-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .main-nav a {
+    flex: 0 0 auto;
   }
 
   .nav-actions {
-    width: 100%;
-    justify-content: space-between;
+    margin-left: auto;
+    gap: 10px;
   }
 
   .hero,
@@ -779,13 +807,15 @@ textarea {
 
   .hero {
     min-height: auto;
+    gap: 24px;
+    padding: 36px 0 24px;
   }
 
   .grid,
-  .grid.two,
-  .media-grid,
-  .before-after-grid,
-  .quick-stats,
+  .media-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .form-row {
     grid-template-columns: 1fr;
   }
@@ -796,27 +826,216 @@ textarea {
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .section-head {
+    gap: 14px;
+  }
+
+  .social-band .social-links {
+    width: 100%;
+  }
+
+  .social-links a {
+    flex: 1 1 150px;
+  }
 }
 
 @media (max-width: 560px) {
   .page,
   .nav-wrap,
   .footer-wrap {
-    width: min(100% - 22px, 1120px);
+    width: min(100% - 28px, 1120px);
   }
 
-  .main-nav {
-    justify-content: flex-start;
+  .site-header {
+    position: static;
+  }
+
+  .nav-wrap {
+    padding: 10px 0 12px;
+  }
+
+  .brand img {
+    height: 42px;
+  }
+
+  .nav-actions .btn {
+    min-height: 38px;
+    padding: 0 12px;
+    font-size: 0.9rem;
+  }
+
+  .theme-toggle {
+    gap: 7px;
+    font-size: 0.8rem;
+  }
+
+  .slider {
+    width: 44px;
+    height: 24px;
+  }
+
+  .slider::after {
+    width: 16px;
+    height: 16px;
+  }
+
+  .theme-toggle input:checked + .slider::after {
+    transform: translateX(20px);
   }
 
   .main-nav a {
-    padding: 8px 9px;
+    padding: 8px 10px;
+    font-size: 0.88rem;
+  }
+
+  .hero h1,
+  .page-title h1 {
+    font-size: 2.35rem;
+    line-height: 1;
+  }
+
+  .hero p,
+  .page-title p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .eyebrow {
+    margin-bottom: 14px;
+    padding: 7px 10px;
+    font-size: 0.72rem;
+  }
+
+  .hero-actions,
+  .inline-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 22px;
+  }
+
+  .hero-actions .btn,
+  .inline-actions .btn,
+  .section-head .btn,
+  .social-links a,
+  .price-card .btn,
+  form .btn {
+    width: 100%;
   }
 
   .hero-panel,
   .card,
   .price-card,
   .contact-card {
+    padding: 16px;
+  }
+
+  .logo-feature {
+    padding: 10px;
+  }
+
+  .quick-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .stat {
+    padding: 10px 8px;
+    text-align: center;
+  }
+
+  .stat strong {
+    font-size: 1.05rem;
+  }
+
+  .stat span {
+    font-size: 0.78rem;
+  }
+
+  .section {
+    padding: 34px 0;
+  }
+
+  .page-title {
+    padding: 36px 0 12px;
+  }
+
+  .grid,
+  .grid.two,
+  .media-grid,
+  .before-after-grid,
+  .split {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .before-after-grid figcaption {
+    left: 8px;
+    top: 8px;
+    padding: 6px 8px;
+    font-size: 0.8rem;
+  }
+
+  .review-card {
     padding: 18px;
+  }
+
+  .review-card blockquote,
+  .home-review blockquote {
+    font-size: 1.35rem;
+  }
+
+  .home-review-carousel {
+    min-height: 330px;
+  }
+
+  .home-review {
+    padding: 22px 18px 58px;
+  }
+
+  .review-dots {
+    left: 18px;
+    bottom: 18px;
+  }
+
+  .footer-wrap {
+    gap: 10px;
+    line-height: 1.55;
+  }
+
+  .footer-wrap span:last-child {
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 400px) {
+  .page,
+  .nav-wrap,
+  .footer-wrap {
+    width: min(100% - 24px, 1120px);
+  }
+
+  .brand img {
+    height: 38px;
+  }
+
+  .theme-toggle > span:first-child {
+    display: none;
+  }
+
+  .nav-actions .btn {
+    min-height: 36px;
+    padding: 0 10px;
+    font-size: 0.84rem;
+  }
+
+  .hero h1,
+  .page-title h1 {
+    font-size: 2.08rem;
+  }
+
+  .price {
+    font-size: 2rem;
   }
 }
