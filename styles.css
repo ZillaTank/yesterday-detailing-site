@@ -298,9 +298,10 @@ img {
 
 .stat:hover,
 .stat:focus-visible {
-  background: var(--surface);
+  background: color-mix(in srgb, var(--accent) 14%, var(--surface-strong));
   border-color: var(--accent);
   transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(66, 166, 232, 0.18);
   outline: 3px solid var(--accent);
   outline-offset: 3px;
 }
@@ -641,8 +642,10 @@ a.card:focus-visible * {
 
 .service-card:hover,
 .service-card:focus-visible {
+  background: color-mix(in srgb, var(--accent) 10%, var(--surface));
   border-color: var(--accent);
   transform: translateY(-2px);
+  box-shadow: 0 16px 34px rgba(66, 166, 232, 0.16);
   outline: 3px solid var(--accent);
   outline-offset: 3px;
 }
