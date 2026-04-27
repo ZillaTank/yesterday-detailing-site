@@ -46,6 +46,7 @@ body {
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
 img {
@@ -309,6 +310,16 @@ img {
   color: inherit;
   text-decoration: none !important;
   text-decoration-line: none !important;
+}
+
+.stat-link *,
+.card-link *,
+.stat-link:hover *,
+.card-link:hover * {
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+  text-decoration-color: transparent !important;
+  border-bottom: 0 !important;
 }
 
 .stat:hover,
@@ -1139,4 +1150,24 @@ textarea {
     box-shadow: 0 0 0 3px rgba(141, 220, 255, 0.22), 0 18px 36px rgba(67, 196, 255, 0.2);
     transform: translateY(-3px);
   }
+}
+
+.quick-stats > .stat-link:hover,
+.quick-stats > .stat-link:focus-visible,
+.quick-stats > .stat-link.card-hover {
+  background: #1b5f9e !important;
+  border-color: #8ddcff !important;
+  box-shadow: 0 0 0 3px rgba(141, 220, 255, 0.3), 0 18px 36px rgba(67, 196, 255, 0.24) !important;
+  transform: translateY(-3px) !important;
+  outline: none !important;
+}
+
+.grid.two > .card-link:hover,
+.grid.two > .card-link:focus-visible,
+.grid.two > .card-link.card-hover {
+  background: #12375f !important;
+  border-color: #8ddcff !important;
+  box-shadow: 0 0 0 3px rgba(141, 220, 255, 0.28), 0 18px 36px rgba(67, 196, 255, 0.22) !important;
+  transform: translateY(-3px) !important;
+  outline: none !important;
 }
