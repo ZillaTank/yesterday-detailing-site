@@ -425,6 +425,14 @@ img {
   width: 100%;
 }
 
+.before-after-card > .before-after-image {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: center;
+  background: var(--surface-strong);
+}
+
 .before-after-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
