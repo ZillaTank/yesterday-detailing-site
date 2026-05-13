@@ -420,17 +420,41 @@ img {
 
 .before-after-card {
   grid-column: 1 / -1;
-  max-width: 880px;
+  max-width: 720px;
   justify-self: center;
   width: 100%;
 }
 
-.before-after-card > .before-after-image {
+.combined-before-after {
+  position: relative;
+  margin: 0;
+}
+
+.before-after-card .before-after-image {
   width: 100%;
   aspect-ratio: 3 / 2;
   object-fit: cover;
   object-position: center;
   background: var(--surface-strong);
+}
+
+.combined-before-after figcaption {
+  position: absolute;
+  top: 12px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
+  color: var(--primary-strong);
+  border: 1px solid var(--line);
+  font-weight: 900;
+}
+
+.combined-before-after .before-label {
+  left: 12px;
+}
+
+.combined-before-after .after-label {
+  left: calc(50% + 12px);
 }
 
 .before-after-grid {
