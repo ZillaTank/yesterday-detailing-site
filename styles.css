@@ -58,7 +58,7 @@ img {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  background: var(--surface);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(16px);
 }
