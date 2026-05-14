@@ -24,7 +24,6 @@
   </script>
   <link rel="stylesheet" href="styles.css?v=5">
   <script src="theme.js" defer></script>
-  <script src="booking-form.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -75,10 +74,10 @@
 
       <section class="contact-card">
         <h2>Booking Form</h2>
-        <form action="https://formsubmit.co/ajax/yesterday.detailing@gmail.com" method="POST" data-booking-form>
+        <form action="https://formsubmit.co/yesterday.detailing@gmail.com" method="POST">
           <input type="hidden" name="_subject" value="New YesterDay Car Detailing booking request">
           <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://yesterdaydetailing.com/thank-you.html">
           <input type="hidden" name="_autoresponse" value="Thanks for requesting a detail with YesterDay Car Detailing. We received your booking request and will reach out soon to confirm availability.">
           <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
           <div class="form-row">
@@ -117,7 +116,6 @@
             <textarea name="vehicle_and_notes" placeholder="Vehicle make/model, condition, location, and any details you want YesterDay to know."></textarea>
           </label>
           <button class="btn" type="submit">Send Request</button>
-          <p class="note" data-form-status aria-live="polite"></p>
         </form>
       </section>
     </section>
