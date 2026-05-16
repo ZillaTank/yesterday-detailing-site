@@ -534,7 +534,7 @@ img {
 
 .review-card blockquote {
   margin: 0;
-  font-size: clamp(1.45rem, 3vw, 2.35rem);
+  font-size: clamp(1.15rem, 2vw, 1.8rem);
   line-height: 1.25;
   font-weight: 900;
 }
@@ -554,7 +554,7 @@ img {
 
 .home-review-carousel {
   position: relative;
-  min-height: 250px;
+  min-height: 360px;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -609,7 +609,7 @@ img {
 .home-review blockquote {
   margin: 0;
   max-width: 850px;
-  font-size: clamp(1.35rem, 3vw, 2.2rem);
+  font-size: clamp(1.05rem, 2.2vw, 1.65rem);
   line-height: 1.25;
   font-weight: 900;
 }
@@ -1111,11 +1111,11 @@ textarea {
 
   .review-card blockquote,
   .home-review blockquote {
-    font-size: 1.35rem;
+    font-size: 1.05rem;
   }
 
   .home-review-carousel {
-    min-height: 330px;
+    min-height: 440px;
   }
 
   .home-review {
