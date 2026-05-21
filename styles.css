@@ -887,6 +887,88 @@ textarea {
   text-decoration: none;
 }
 
+.payment-wrap {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 0 0 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.payment-note {
+  margin-right: 4px;
+}
+
+.pay-badge {
+  min-width: 42px;
+  height: 26px;
+  padding: 0 9px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #111827;
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.12);
+  font-size: 0.72rem;
+  line-height: 1;
+}
+
+.pay-badge.cash {
+  min-width: 34px;
+  background: #16c75f;
+  color: #ffffff;
+  border-color: #16c75f;
+  font-size: 1rem;
+}
+
+.pay-badge.apple {
+  font-weight: 900;
+}
+
+.pay-badge.google {
+  color: #4285f4;
+}
+
+.pay-badge.visa {
+  background: #1a5fb4;
+  color: #ffffff;
+  border-color: #1a5fb4;
+  font-weight: 900;
+}
+
+.pay-badge.mastercard {
+  color: #ffffff;
+  background: linear-gradient(90deg, #eb001b 0 50%, #f79e1b 50% 100%);
+  border-color: transparent;
+  font-size: 0.62rem;
+}
+
+.pay-badge.amex {
+  background: #2e77bb;
+  color: #ffffff;
+  border-color: #2e77bb;
+  font-weight: 900;
+}
+
+.pay-badge.discover {
+  background: linear-gradient(90deg, #ffffff 0 58%, #ff8a00 58% 100%);
+  color: #111827;
+  font-size: 0.62rem;
+}
+
+.pay-badge.jcb {
+  background: linear-gradient(90deg, #1f70c1 0 33%, #ffffff 33% 66%, #1ea65b 66% 100%);
+  color: #111827;
+  font-weight: 900;
+}
+
 @media (max-width: 900px) {
   .nav-wrap {
     min-height: auto;
