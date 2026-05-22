@@ -333,8 +333,11 @@ img {
   margin: 28px 0 10px;
   padding: 34px;
   border-radius: 8px;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-  color: #ffffff;
+  background:
+    radial-gradient(circle at top left, rgba(117, 184, 255, 0.18), transparent 26rem),
+    var(--surface);
+  color: var(--text);
+  border: 1px solid var(--line);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -349,14 +352,14 @@ img {
 
 .booking-band p {
   margin: 8px 0 0;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--muted);
   line-height: 1.55;
 }
 
 .booking-band .btn {
-  background: #ffffff;
-  color: #073d83;
-  box-shadow: none;
+  background: var(--primary);
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(10, 86, 179, 0.2);
   flex: 0 0 auto;
 }
 
