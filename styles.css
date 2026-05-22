@@ -301,7 +301,7 @@ img {
 
 .hero-card-title {
   margin-top: 28px;
-  font-size: clamp(1.55rem, 3.3vw, 2.35rem);
+  font-size: clamp(1.35rem, 2.6vw, 1.95rem);
   line-height: 1.05;
 }
 
@@ -324,8 +324,8 @@ img {
   margin: 0;
   max-width: 680px;
   color: var(--muted);
-  font-size: clamp(0.88rem, 1.15vw, 1rem);
-  line-height: 1.65;
+  font-size: clamp(0.78rem, 1vw, 0.9rem);
+  line-height: 1.6;
 }
 
 .centered-actions {
@@ -1316,7 +1316,7 @@ textarea {
   .hero p,
   .hero-description,
   .page-title p {
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1.6;
   }
 
@@ -1466,7 +1466,7 @@ textarea {
   .one-page-hero h1,
   .hero-card-title,
   .page-title h1 {
-    font-size: 1.36rem;
+    font-size: 1.22rem;
   }
 
   .price {
