@@ -280,8 +280,8 @@ img {
 }
 
 .soapy-hero-logo {
-  width: min(430px, 92vw);
-  aspect-ratio: 16 / 9;
+  width: min(620px, 100%);
+  aspect-ratio: 2.35 / 1;
   height: auto;
   object-fit: cover;
   object-position: center;
@@ -1331,7 +1331,7 @@ textarea {
 
   .soapy-hero-logo {
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 2 / 1;
   }
 
   .booking-band {
