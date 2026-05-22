@@ -42,6 +42,7 @@ body {
     radial-gradient(circle at top left, rgba(139, 185, 239, 0.26), transparent 32rem),
     linear-gradient(180deg, var(--bg), var(--surface-strong));
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 a {
@@ -252,6 +253,129 @@ img {
   margin-top: 28px;
 }
 
+.one-page-header .nav-wrap {
+  min-height: auto;
+  padding: 14px 0 16px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+.centered-brand {
+  min-width: 0;
+  justify-content: center;
+}
+
+.one-page-header .brand img {
+  height: 64px;
+}
+
+.one-page-header .main-nav a {
+  padding-inline: 14px;
+}
+
+.one-page section[id] {
+  scroll-margin-top: 168px;
+}
+
+.one-page-hero {
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 44px 0 58px;
+}
+
+.soapy-hero-logo {
+  width: min(430px, 92vw);
+  max-height: 310px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  margin-bottom: 28px;
+}
+
+.one-page-hero h1 {
+  margin: 0;
+  font-size: clamp(2.45rem, 7vw, 4.8rem);
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+.hero-description {
+  margin: 20px auto 0;
+  max-width: 760px;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 2vw, 1.28rem);
+  line-height: 1.7;
+}
+
+.centered-actions {
+  justify-content: center;
+}
+
+.large-btn {
+  min-height: 54px;
+  padding-inline: 28px;
+  font-size: 1rem;
+}
+
+.services-pricing-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.services-pricing-grid .price-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.services-pricing-grid .price-card .btn {
+  margin-top: auto;
+}
+
+.booking-band {
+  margin: 28px 0 10px;
+  padding: 34px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  box-shadow: var(--shadow);
+}
+
+.booking-band h2 {
+  margin: 0;
+  font-size: clamp(1.65rem, 3vw, 2.45rem);
+}
+
+.booking-band p {
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.55;
+}
+
+.booking-band .btn {
+  background: #ffffff;
+  color: #073d83;
+  box-shadow: none;
+  flex: 0 0 auto;
+}
+
+.one-page-media-grid {
+  align-items: stretch;
+}
+
+.booking-section {
+  padding-bottom: 72px;
+}
+
 .hero-panel {
   background: var(--surface);
   border: 1px solid var(--line);
@@ -372,6 +496,10 @@ img {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
+}
+
+.grid.services-pricing-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .grid.two {
@@ -1026,6 +1154,36 @@ textarea {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .one-page-header .nav-wrap {
+    align-items: center;
+  }
+
+  .one-page-header .main-nav {
+    justify-content: center;
+  }
+
+  .one-page section[id] {
+    scroll-margin-top: 178px;
+  }
+
+  .one-page-hero {
+    min-height: auto;
+    padding: 44px 0 48px;
+  }
+
+  .services-pricing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid.services-pricing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .booking-band {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .form-row {
     grid-template-columns: 1fr;
   }
@@ -1053,8 +1211,9 @@ textarea {
 @media (max-width: 560px) {
   .page,
   .nav-wrap,
-  .footer-wrap {
-    width: min(100% - 28px, 1120px);
+  .footer-wrap,
+  .payment-wrap {
+    width: min(calc(100% - 40px), 1120px);
   }
 
   .site-header {
@@ -1067,6 +1226,20 @@ textarea {
 
   .brand img {
     height: 42px;
+  }
+
+  .one-page-header .brand img {
+    height: 54px;
+  }
+
+  .one-page-header .nav-actions {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .one-page-header .nav-actions .btn {
+    display: none;
   }
 
   .nav-actions .btn {
@@ -1095,17 +1268,25 @@ textarea {
   }
 
   .main-nav a {
-    padding: 8px 10px;
-    font-size: 0.88rem;
+    padding: 8px 8px;
+    font-size: 0.82rem;
   }
 
   .hero h1,
+  .one-page-hero h1,
   .page-title h1 {
-    font-size: 2.35rem;
+    font-size: 1.48rem;
     line-height: 1;
+    overflow-wrap: break-word;
+  }
+
+  .one-page-hero h1,
+  .hero-description {
+    max-width: 320px;
   }
 
   .hero p,
+  .hero-description,
   .page-title p {
     font-size: 1rem;
     line-height: 1.6;
@@ -1127,6 +1308,7 @@ textarea {
 
   .hero-actions .btn,
   .inline-actions .btn,
+  .booking-band .btn,
   .section-head .btn,
   .social-links a,
   .price-card .btn,
@@ -1167,12 +1349,23 @@ textarea {
     padding: 34px 0;
   }
 
+  .soapy-hero-logo {
+    width: 100%;
+    max-height: 240px;
+  }
+
+  .booking-band {
+    padding: 22px 18px;
+  }
+
   .page-title {
     padding: 36px 0 12px;
   }
 
   .grid,
   .grid.two,
+  .services-pricing-grid,
+  .grid.services-pricing-grid,
   .media-grid,
   .before-after-grid,
   .split {
@@ -1222,8 +1415,9 @@ textarea {
 @media (max-width: 400px) {
   .page,
   .nav-wrap,
-  .footer-wrap {
-    width: min(100% - 24px, 1120px);
+  .footer-wrap,
+  .payment-wrap {
+    width: min(calc(100% - 32px), 1120px);
   }
 
   .brand img {
@@ -1241,8 +1435,9 @@ textarea {
   }
 
   .hero h1,
+  .one-page-hero h1,
   .page-title h1 {
-    font-size: 2.08rem;
+    font-size: 1.36rem;
   }
 
   .price {
