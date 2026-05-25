@@ -444,22 +444,20 @@ img {
 }
 
 .service-menu-hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 240px;
-  gap: 48px;
-  align-items: start;
   padding: 40px 0 20px;
 }
 
 .service-menu-banner {
   width: 100%;
+  max-width: 880px;
   aspect-ratio: 3.45 / 1;
   object-fit: cover;
   object-position: center;
   border-radius: 8px;
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
-  margin: 0 0 18px;
+  margin: 0 auto 18px;
+  display: block;
 }
 
 .service-meta {
@@ -467,6 +465,7 @@ img {
   flex-wrap: wrap;
   gap: 10px;
   align-items: center;
+  justify-content: center;
   margin: 0 0 12px;
   color: var(--text);
   font-weight: 800;
@@ -476,6 +475,7 @@ img {
 .service-meta a {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   min-height: 34px;
   padding: 7px 10px;
   border-radius: 8px;
@@ -485,8 +485,16 @@ img {
   text-decoration: none;
 }
 
+.service-meta .service-meta-book {
+  min-width: 92px;
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+  box-shadow: 0 10px 22px rgba(10, 86, 179, 0.18);
+}
+
 .service-menu-copy p:not(.service-meta) {
-  margin: 0;
+  margin: 0 auto;
   max-width: 880px;
   color: var(--muted);
   line-height: 1.65;
@@ -494,19 +502,9 @@ img {
 
 .service-menu-copy .service-location {
   margin-top: 22px;
+  text-align: center;
   color: var(--text);
   font-weight: 900;
-}
-
-.service-menu-actions {
-  display: grid;
-  gap: 10px;
-  position: sticky;
-  top: 104px;
-}
-
-.service-menu-actions .btn {
-  width: 100%;
 }
 
 .service-menu-section {
@@ -561,30 +559,10 @@ img {
   line-height: 1.55;
 }
 
-.service-menu-item .service-menu-details {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  color: var(--muted);
-  font-weight: 700;
-  font-size: 0.92rem;
-  overflow-wrap: anywhere;
-}
-
-.service-menu-details span {
-  display: inline-flex;
-  align-items: center;
-  min-height: 32px;
-  padding: 6px 9px;
-  border-radius: 8px;
-  border: 1px solid var(--line);
-  background: var(--surface-strong);
-}
-
 .service-card-footer {
   display: flex;
   align-items: flex-end;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 14px;
   margin-top: auto;
   padding-top: 18px;
@@ -1469,13 +1447,7 @@ textarea {
   }
 
   .service-menu-hero {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .service-menu-actions {
-    position: static;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 32px 0 16px;
   }
 
   .service-menu-grid {
@@ -1681,10 +1653,6 @@ textarea {
 
   .service-menu-banner {
     aspect-ratio: 2.45 / 1;
-  }
-
-  .service-menu-actions {
-    grid-template-columns: 1fr;
   }
 
   .service-menu-item {
