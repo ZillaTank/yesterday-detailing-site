@@ -443,6 +443,17 @@ img {
   padding-bottom: 72px;
 }
 
+.booking-section .section-head {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-bottom: 0;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 0;
+  background:
+    radial-gradient(circle at top right, rgba(117, 184, 255, 0.12), transparent 18rem),
+    color-mix(in srgb, var(--surface) 88%, var(--surface-strong));
+}
+
 .service-menu-hero {
   padding: 40px 0 20px;
 }
@@ -1101,18 +1112,36 @@ a.card:focus-visible * {
 }
 
 .square-booking-card {
-  min-height: 280px;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  min-height: 560px;
+  background:
+    radial-gradient(circle at top right, rgba(117, 184, 255, 0.11), transparent 18rem),
+    color-mix(in srgb, var(--surface) 92%, var(--surface-strong));
 }
 
 .square-booking-widget {
   display: flex;
-  align-items: center;
-  min-height: 120px;
-  padding-top: 8px;
+  align-items: stretch;
+  min-height: 470px;
+  margin-top: 12px;
+  padding: 12px;
+  border: 1px solid color-mix(in srgb, var(--line) 72%, #ffffff);
+  border-radius: 8px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.82), rgba(233, 245, 255, 0.88));
+  overflow: hidden;
 }
 
 .square-booking-widget > * {
+  width: 100%;
   max-width: 100%;
+}
+
+.square-booking-widget iframe {
+  width: 100% !important;
+  min-height: 470px;
+  border-radius: 6px;
 }
 
 .card ul,
@@ -1149,10 +1178,38 @@ a.card:focus-visible * {
   align-items: start;
 }
 
+.booking-layout {
+  grid-template-columns: minmax(260px, 0.7fr) minmax(0, 1.3fr);
+  align-items: start;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 0 0 8px 8px;
+  background:
+    linear-gradient(145deg, color-mix(in srgb, var(--surface) 82%, transparent), transparent),
+    color-mix(in srgb, var(--surface-strong) 28%, transparent);
+  box-shadow: var(--shadow);
+}
+
+.booking-layout .contact-card {
+  box-shadow: none;
+}
+
+.booking-contact-card {
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(circle at top left, rgba(117, 184, 255, 0.1), transparent 18rem),
+    color-mix(in srgb, var(--surface) 90%, var(--surface-strong));
+}
+
 .contact-list {
   display: grid;
   gap: 12px;
   margin-top: 18px;
+}
+
+.booking-contact-card .contact-list {
+  margin-top: 22px;
 }
 
 .contact-link {
@@ -1212,6 +1269,12 @@ a.card:focus-visible * {
 
 .social-links.compact {
   margin-top: 14px;
+}
+
+.booking-contact-card .social-links.compact {
+  margin-top: 20px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
 }
 
 form {
@@ -1404,6 +1467,10 @@ textarea {
   .hero,
   .split {
     grid-template-columns: 1fr;
+  }
+
+  .booking-layout {
+    padding: 18px;
   }
 
   .hero {
@@ -1605,6 +1672,20 @@ textarea {
   .price-card,
   .contact-card {
     padding: 16px;
+  }
+
+  .booking-section .section-head,
+  .booking-layout {
+    padding: 16px;
+  }
+
+  .square-booking-card {
+    min-height: 500px;
+  }
+
+  .square-booking-widget,
+  .square-booking-widget iframe {
+    min-height: 430px;
   }
 
   .logo-feature {
