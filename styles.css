@@ -534,6 +534,30 @@ img {
   overflow-wrap: anywhere;
 }
 
+.service-extras {
+  grid-column: 1 / -1;
+}
+
+.extras-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.extras-list span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  background: var(--surface-strong);
+  border: 1px solid var(--line);
+  color: var(--text);
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
 .hero-panel {
   background: var(--surface);
   border: 1px solid var(--line);

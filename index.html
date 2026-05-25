@@ -37,7 +37,7 @@
     "areaServed": "Northern Virginia",
     "image": "https://yesterdaydetailing.com/soap-biz-card.jpg",
     "logo": "https://yesterdaydetailing.com/logo-light.png",
-    "priceRange": "$70-$160+",
+    "priceRange": "$30-$260+",
     "sameAs": [
       "https://www.tiktok.com/@yesterday_car_detailing",
       "https://www.instagram.com/yesterday_car_detailing/",
@@ -46,20 +46,38 @@
     "makesOffer": [
       {
         "@type": "Offer",
-        "name": "Exterior Detail",
-        "price": "70",
+        "name": "Basic Exterior",
+        "price": "80",
         "priceCurrency": "USD"
       },
       {
         "@type": "Offer",
-        "name": "Interior Detail",
-        "price": "100",
+        "name": "Basic Interior",
+        "price": "110",
         "priceCurrency": "USD"
       },
       {
         "@type": "Offer",
-        "name": "Combo Detail",
-        "price": "160",
+        "name": "Combo",
+        "price": "180",
+        "priceCurrency": "USD"
+      },
+      {
+        "@type": "Offer",
+        "name": "Luxury Interior",
+        "price": "150",
+        "priceCurrency": "USD"
+      },
+      {
+        "@type": "Offer",
+        "name": "Luxury Full Detail",
+        "price": "260",
+        "priceCurrency": "USD"
+      },
+      {
+        "@type": "Offer",
+        "name": "Clay Wash + Sealant and Protection",
+        "price": "110",
         "priceCurrency": "USD"
       }
     ]
@@ -112,45 +130,59 @@
     <section id="services" class="section service-menu-section">
       <div class="service-menu-grid">
         <article class="service-menu-item">
-          <h3>Exterior Detail</h3>
-          <span class="service-price">$70+</span>
-          <p>A clean, glossy finish with attention to tires, paint, glass, and door jambs.</p>
-          <p class="service-menu-details"><a href="#booking">Book now</a> • $70+ • Exterior wash and shine</p>
+          <h3>Basic Exterior</h3>
+          <span class="service-price">$80</span>
+          <p>A clean exterior wash for paint, glass, wheels, tires, and the details that make your vehicle look sharp again.</p>
+          <p class="service-menu-details"><a href="#booking">Book now</a> • $80 • Exterior wash and shine</p>
         </article>
 
         <article class="service-menu-item">
-          <h3>Interior Detail</h3>
-          <span class="service-price">$100+</span>
-          <p>A full cabin refresh for daily drivers, family cars, and vehicles that need a clean reset.</p>
-          <p class="service-menu-details"><a href="#booking">Book now</a> • $100+ • Vacuum, steam, surfaces, and mats</p>
+          <h3>Basic Interior</h3>
+          <span class="service-price">$110</span>
+          <p>A practical cabin refresh for daily drivers, family cars, and vehicles that need a cleaner reset.</p>
+          <p class="service-menu-details"><a href="#booking">Book now</a> • $110 • Vacuum, surfaces, and mats</p>
         </article>
 
         <article class="service-menu-item">
-          <h3>Combo Detail</h3>
-          <span class="service-price">$160+</span>
-          <p>The best-value full detail package for customers who want the strongest overall result.</p>
-          <p class="service-menu-details"><a href="#booking">Book now</a> • $160+ • Interior and exterior package</p>
+          <h3>Combo</h3>
+          <span class="service-price">$180</span>
+          <p>The best-value package for customers who want both the basic interior and basic exterior handled together.</p>
+          <p class="service-menu-details"><a href="#booking">Book now</a> • $180 • Interior and exterior package</p>
         </article>
 
         <article class="service-menu-item">
-          <h3>Wax Add-On</h3>
-          <span class="service-price">$35</span>
-          <p>Add more gloss and protection to an exterior or combo appointment.</p>
-          <p class="service-menu-details"><a href="#booking">Ask about wax</a> • $35 add-on • Extra shine and protection</p>
+          <h3>Luxury Interior</h3>
+          <span class="service-price">$150</span>
+          <p>A deeper interior reset for vehicles that need more attention, conditioning, and a more complete cabin refresh.</p>
+          <p class="service-menu-details"><a href="#booking">Book now</a> • $150 • Deeper interior service</p>
         </article>
 
         <article class="service-menu-item">
-          <h3>Interior Reset</h3>
-          <span class="service-price">Quote</span>
-          <p>Focused interior cleanup for vehicles that need a practical refresh without a full combo package.</p>
-          <p class="service-menu-details"><a href="#booking">Book now</a> • Custom quote • Seats, floors, and touchpoints</p>
+          <h3>Luxury Full Detail</h3>
+          <span class="service-price">$260+</span>
+          <p>The full reset for customers who want the strongest interior and exterior result with premium attention.</p>
+          <p class="service-menu-details"><a href="#booking">Book now</a> • $260+ • Premium full detail</p>
         </article>
 
         <article class="service-menu-item">
-          <h3>Custom Quote</h3>
-          <span class="service-price">Custom</span>
-          <p>Have a larger vehicle, special condition, or specific goal? Send details and photos for a clear estimate.</p>
-          <p class="service-menu-details"><a href="#booking">Request quote</a> • Priced by condition • Mobile service</p>
+          <h3>Clay Wash + Sealant</h3>
+          <span class="service-price">$110</span>
+          <p>A focused exterior service that removes bonded contaminants and adds sealant protection for a smoother finish.</p>
+          <p class="service-menu-details"><a href="#booking">Book now</a> • $110 • Sealant and protection</p>
+        </article>
+
+        <article class="service-menu-item service-extras">
+          <h3>Extras</h3>
+          <span class="service-price">Add-ons</span>
+          <div class="extras-list">
+            <span>Seat shampoo • $30</span>
+            <span>Leather conditioner • $30</span>
+            <span>Plastic conditioner • $30</span>
+            <span>Carpet shampoo • $30</span>
+            <span>Headlight restoration • $60</span>
+            <span>Engine bay cleaning • $50</span>
+            <span>Severe pet hair • $40</span>
+          </div>
         </article>
       </div>
     </section>
@@ -308,10 +340,13 @@
                 Service
                 <select name="Service" required>
                   <option value="">Choose one</option>
-                  <option>Interior Detail</option>
-                  <option>Exterior Detail</option>
-                  <option>Combo Detail</option>
-                  <option>Wax Add-On</option>
+                  <option>Basic Exterior</option>
+                  <option>Basic Interior</option>
+                  <option>Combo</option>
+                  <option>Luxury Interior</option>
+                  <option>Luxury Full Detail</option>
+                  <option>Clay Wash + Sealant and Protection</option>
+                  <option>Extras / Add-Ons</option>
                   <option>Custom Quote</option>
                 </select>
               </label>
