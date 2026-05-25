@@ -1100,6 +1100,21 @@ a.card:focus-visible * {
   line-height: 1.55;
 }
 
+.square-booking-card {
+  min-height: 280px;
+}
+
+.square-booking-widget {
+  display: flex;
+  align-items: center;
+  min-height: 120px;
+  padding-top: 8px;
+}
+
+.square-booking-widget > * {
+  max-width: 100%;
+}
+
 .card ul,
 .price-card ul {
   padding-left: 19px;

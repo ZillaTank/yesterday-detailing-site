@@ -53,8 +53,8 @@
   <main class="page">
     <section class="page-title">
       <p class="eyebrow">Booking and contact</p>
-      <h1>Request Your Detail</h1>
-      <p>Send a booking request, or contact YesterDay Car Detailing directly by phone, text, or email.</p>
+      <h1>Book Your Detail</h1>
+      <p>Schedule through Square, or contact YesterDay Car Detailing directly by phone, text, or email.</p>
     </section>
 
     <section class="section split">
@@ -72,51 +72,12 @@
         </div>
       </aside>
 
-      <section class="contact-card">
-        <h2>Booking Form</h2>
-        <form action="https://formspree.io/f/mojrggll" method="POST">
-          <input type="hidden" name="subject" value="New YesterDay Car Detailing booking request">
-          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-          <div class="form-row">
-            <label>
-              Name
-              <input name="Name" autocomplete="name" required>
-            </label>
-            <label>
-              Phone
-              <input name="Phone" type="tel" autocomplete="tel" required>
-            </label>
-          </div>
-          <label>
-            Email
-            <input name="email" type="email" autocomplete="email" required>
-          </label>
-          <div class="form-row">
-            <label>
-              Service
-              <select name="Service" required>
-                <option value="">Choose one</option>
-                <option>Basic Exterior</option>
-                <option>Basic Interior</option>
-                <option>Combo</option>
-                <option>Luxury Interior</option>
-                <option>Luxury Full Detail</option>
-                <option>Clay Wash + Sealant and Protection</option>
-                <option>Extras / Add-Ons</option>
-                <option>Custom Quote</option>
-              </select>
-            </label>
-            <label>
-              Preferred Date
-              <input name="Preferred Date" type="date">
-            </label>
-          </div>
-          <label>
-            Vehicle and Notes
-            <textarea name="Vehicle and Notes" placeholder="Vehicle make/model, condition, location, and any details you want YesterDay to know."></textarea>
-          </label>
-          <button class="btn" type="submit">Send Request</button>
-        </form>
+      <section class="contact-card square-booking-card">
+        <h2>Schedule Online</h2>
+        <p>Book directly through Square for available detailing appointments.</p>
+        <div class="square-booking-widget">
+          <!-- Start Square Appointments Embed Code --><script src="https://square.site/appointments/buyer/widget/hwtfurj6mw3m24/L4SW4S6JGXWSM.js"></script><!-- End Square Appointments Embed Code -->
+        </div>
       </section>
     </section>
   </main>
