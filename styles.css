@@ -511,6 +511,10 @@ img {
   box-shadow: 0 10px 22px rgba(10, 86, 179, 0.18);
 }
 
+.intro-copy-mobile {
+  display: none;
+}
+
 .service-menu-copy p:not(.service-meta) {
   margin: 0 auto;
   max-width: 880px;
@@ -1750,8 +1754,8 @@ textarea {
   .service-menu-item p,
   .contact-card p,
   .media-card-body p {
-    font-size: 0.86rem;
-    line-height: 1.5;
+    font-size: 0.84rem;
+    line-height: 1.45;
   }
 
   .soapy-hero-logo {
@@ -1779,33 +1783,75 @@ textarea {
     gap: 14px;
   }
 
+  .service-menu-grid {
+    gap: 10px;
+  }
+
   .one-page-media-grid {
     grid-template-columns: 1fr;
   }
 
   .service-menu-hero {
-    padding: 32px 0 16px;
+    padding: 20px 0 10px;
   }
 
   .service-menu-banner {
-    aspect-ratio: 2.45 / 1;
+    aspect-ratio: 2.7 / 1;
+    margin-bottom: 12px;
+  }
+
+  .service-meta {
+    display: none;
+  }
+
+  .intro-copy-full {
+    display: none;
+  }
+
+  .intro-copy-mobile {
+    display: block;
+    max-width: 300px;
+    text-align: center;
+    font-weight: 800;
+  }
+
+  .service-menu-copy .service-location {
+    margin-top: 8px;
+    font-size: 0.82rem;
   }
 
   .service-menu-item {
-    padding: 16px;
+    padding: 14px;
   }
 
   .service-menu-item h3 {
-    margin-right: 64px;
-    font-size: 1.12rem;
+    margin-right: 58px;
+    margin-bottom: 8px;
+    font-size: 1.05rem;
   }
 
   .service-price {
-    top: 14px;
-    right: 14px;
-    min-width: 52px;
-    padding: 6px 8px;
-    font-size: 0.8rem;
+    top: 12px;
+    right: 12px;
+    min-width: 48px;
+    padding: 5px 7px;
+    font-size: 0.76rem;
+  }
+
+  .service-menu-item p {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .service-card-footer {
+    padding-top: 12px;
+  }
+
+  .service-book-btn {
+    min-height: 36px;
+    padding: 8px 12px;
   }
 
   .service-book-btn,
@@ -1813,6 +1859,17 @@ textarea {
   .contact-link,
   .social-links a {
     font-size: 0.84rem;
+  }
+
+  .extras-list {
+    gap: 7px;
+    margin-top: 10px;
+  }
+
+  .extras-list span {
+    min-height: 30px;
+    padding: 6px 8px;
+    font-size: 0.78rem;
   }
 
   .before-after-grid figcaption {
