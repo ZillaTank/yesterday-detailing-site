@@ -1226,8 +1226,12 @@ a.card:focus-visible * {
     color-mix(in srgb, var(--surface) 90%, var(--surface-strong));
 }
 
+.contact-copy-mobile,
 .contact-icon-grid {
-  display: grid;
+  display: none;
+}
+
+.contact-icon-grid {
   grid-template-columns: repeat(5, minmax(42px, 1fr));
   gap: 10px;
   margin-top: 18px;
@@ -1929,11 +1933,18 @@ textarea {
     padding: 14px;
   }
 
-  .booking-contact-card p {
+  .contact-copy-desktop,
+  .contact-text-links {
+    display: none;
+  }
+
+  .contact-copy-mobile {
+    display: block;
     margin-bottom: 0;
   }
 
   .contact-icon-grid {
+    display: grid;
     gap: 8px;
     margin-top: 12px;
   }
