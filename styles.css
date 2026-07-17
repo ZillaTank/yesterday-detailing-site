@@ -666,9 +666,9 @@ img {
 .google-review-float {
   position: absolute;
   z-index: 8;
-  top: 104px;
-  right: max(18px, calc((100vw - 1240px) / 2));
-  width: min(310px, calc(100vw - 36px));
+  top: 235px;
+  right: max(28px, calc((100vw - 1240px) / 2));
+  width: min(270px, calc(100vw - 56px));
   color: #202124;
   transform: rotate(30deg);
   transform-origin: top right;
@@ -1779,7 +1779,7 @@ textarea {
 
 @media (max-width: 900px) {
   .google-review-float {
-    top: 142px;
+    top: 275px;
   }
 
   .nav-wrap {
@@ -1921,9 +1921,9 @@ textarea {
 
 @media (max-width: 560px) {
   .google-review-float {
-    top: 106px;
-    right: 10px;
-    width: 238px;
+    top: 215px;
+    right: 20px;
+    width: 210px;
   }
 
   .google-review-heading strong {
