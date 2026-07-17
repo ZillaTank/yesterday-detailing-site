@@ -64,7 +64,7 @@ body::before {
   z-index: -1;
   inset: 0;
   background: url("detailing-background.jpeg") center 42% / cover no-repeat;
-  opacity: 0.1;
+  opacity: 0.2;
   pointer-events: none;
 }
 
@@ -664,13 +664,13 @@ img {
 }
 
 .google-review-float {
-  position: fixed;
+  position: absolute;
   z-index: 8;
   top: 104px;
   right: max(18px, calc((100vw - 1240px) / 2));
   width: min(310px, calc(100vw - 36px));
   color: #202124;
-  transform: rotate(-2deg);
+  transform: rotate(-30deg);
   transform-origin: top right;
 }
 
