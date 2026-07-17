@@ -9,23 +9,12 @@
   let activeIndex = 0;
   let timerId;
 
-  function showSlide(index, direction = 1) {
+  function showSlide(index) {
     if (index === activeIndex) return;
-    const previousIndex = activeIndex;
     activeIndex = index;
 
     slides.forEach((slide, slideIndex) => {
-      slide.classList.remove("active", "exit-left", "exit-right", "enter-left", "enter-right");
-
-      if (slideIndex === previousIndex) {
-        slide.classList.add(direction > 0 ? "exit-left" : "exit-right");
-      } else if (slideIndex === activeIndex) {
-        slide.classList.add(direction > 0 ? "enter-right" : "enter-left");
-        window.requestAnimationFrame(() => {
-          slide.classList.add("active");
-          slide.classList.remove("enter-right", "enter-left");
-        });
-      }
+      slide.classList.toggle("active", slideIndex === activeIndex);
     });
 
     dots.forEach((dot, dotIndex) => {
@@ -38,13 +27,13 @@
   function startRotation() {
     window.clearInterval(timerId);
     timerId = window.setInterval(() => {
-      showSlide((activeIndex + 1) % slides.length, 1);
+      showSlide((activeIndex + 1) % slides.length);
     }, 5200);
   }
 
   dots.forEach((dot, index) => {
     dot.addEventListener("click", () => {
-      showSlide(index, index > activeIndex ? 1 : -1);
+      showSlide(index);
       startRotation();
     });
   });
