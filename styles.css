@@ -670,7 +670,7 @@ img {
   right: max(18px, calc((100vw - 1240px) / 2));
   width: min(310px, calc(100vw - 36px));
   color: #202124;
-  transform: rotate(-30deg);
+  transform: rotate(30deg);
   transform-origin: top right;
 }
 
