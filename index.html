@@ -22,7 +22,7 @@
   <script>
     document.documentElement.dataset.theme = localStorage.getItem("yd-theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
   </script>
-  <link rel="stylesheet" href="styles.css?v=6">
+  <link rel="stylesheet" href="styles.css?v=7">
   <script src="theme.js" defer></script>
   <script src="reviews.js" defer></script>
   <script type="application/ld+json">
@@ -93,7 +93,6 @@
       </a>
       <nav class="main-nav" aria-label="Primary navigation">
         <a href="#services">Services</a>
-        <a href="#reviews">Reviews</a>
         <a href="#media">Media</a>
         <a href="https://book.squareup.com/appointments/hwtfurj6mw3m24/location/L4SW4S6JGXWSM/services">Booking</a>
       </nav>
@@ -107,6 +106,42 @@
       </div>
     </div>
   </header>
+
+  <aside class="google-review-float" aria-label="Google customer reviews" data-review-carousel>
+    <div class="google-review-heading">
+      <span class="google-g" aria-hidden="true">G</span>
+      <span><strong>Google Reviews</strong><small>5.0 <span class="google-stars" aria-label="5 out of 5 stars">★★★★★</span></small></span>
+    </div>
+    <div class="google-review-slides">
+      <article class="google-review-slide active" data-review-slide>
+        <blockquote>“Perfect in every aspect, my 15-year-old Toyota looks like new.”</blockquote>
+        <cite>David H.</cite>
+      </article>
+      <article class="google-review-slide" data-review-slide>
+        <blockquote>“My car hasn't looked this clean in a long time. Great communication and very friendly.”</blockquote>
+        <cite>Dominick A.</cite>
+      </article>
+      <article class="google-review-slide" data-review-slide>
+        <blockquote>“Very convenient and great attention to detail. My car looks brand new.”</blockquote>
+        <cite>Joshua C.</cite>
+      </article>
+      <article class="google-review-slide" data-review-slide>
+        <blockquote>“The whole car looked brand new and I couldn't be happier.”</blockquote>
+        <cite>Javed</cite>
+      </article>
+      <article class="google-review-slide" data-review-slide>
+        <blockquote>“Easily one of the best detailers out there. Ayden was extremely professional.”</blockquote>
+        <cite>Jared</cite>
+      </article>
+    </div>
+    <div class="google-review-dots" aria-label="Choose a review">
+      <button type="button" class="active" aria-label="Show review 1" data-review-dot></button>
+      <button type="button" aria-label="Show review 2" data-review-dot></button>
+      <button type="button" aria-label="Show review 3" data-review-dot></button>
+      <button type="button" aria-label="Show review 4" data-review-dot></button>
+      <button type="button" aria-label="Show review 5" data-review-dot></button>
+    </div>
+  </aside>
 
   <main id="top" class="page one-page">
     <section class="service-menu-hero" aria-label="YesterDay Car Detailing service menu">
@@ -195,55 +230,6 @@
             <a class="service-book-btn" href="https://book.squareup.com/appointments/hwtfurj6mw3m24/location/L4SW4S6JGXWSM/services">Book extras</a>
           </div>
         </article>
-      </div>
-    </section>
-
-    <section id="reviews" class="section">
-      <div class="section-head">
-        <div>
-          <h2>Reviews</h2>
-          <p>Customer feedback from people who trusted YesterDay with their vehicle.</p>
-        </div>
-      </div>
-
-      <div class="home-review-carousel" aria-label="Customer reviews" data-review-carousel>
-        <article class="home-review active" data-review-slide>
-          <div class="stars" aria-label="Five star review">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote>&ldquo;Perfect in every aspect, my 15-year-old Toyota looks like new.&rdquo;</blockquote>
-          <cite>David H.</cite>
-        </article>
-
-        <article class="home-review" data-review-slide>
-          <div class="stars" aria-label="Five star review">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote>&ldquo;My car hasn't looked this clean in a long time, great communication and very friendly.&rdquo;</blockquote>
-          <cite>Dominick A.</cite>
-        </article>
-
-        <article class="home-review" data-review-slide>
-          <div class="stars" aria-label="Five star review">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote>&ldquo;Very convient and great attention to detail, my car looks brand new.&rdquo;</blockquote>
-          <cite>Joshua C.</cite>
-        </article>
-
-        <article class="home-review" data-review-slide>
-          <div class="stars" aria-label="Five star review">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote>&ldquo;Just got my car detailed by this guy, and they did not disappoint... Whole car looked brand new and I couldn't be happier.&rdquo;</blockquote>
-          <cite>Javed</cite>
-        </article>
-
-        <article class="home-review" data-review-slide>
-          <div class="stars" aria-label="Five star review">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote>&ldquo;Easily one of the best detailers out there, ayden was extremely professional. he is clearly an expert when it comes to detailing.&rdquo;</blockquote>
-          <cite>Jared</cite>
-        </article>
-
-        <div class="review-dots" aria-label="Review carousel controls">
-          <button type="button" class="active" aria-label="Show review 1" data-review-dot></button>
-          <button type="button" aria-label="Show review 2" data-review-dot></button>
-          <button type="button" aria-label="Show review 3" data-review-dot></button>
-          <button type="button" aria-label="Show review 4" data-review-dot></button>
-          <button type="button" aria-label="Show review 5" data-review-dot></button>
-        </div>
       </div>
     </section>
 
