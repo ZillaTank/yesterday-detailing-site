@@ -55,6 +55,17 @@ body {
     linear-gradient(180deg, var(--bg), var(--surface-strong));
   min-height: 100vh;
   overflow-x: hidden;
+  isolation: isolate;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  background: url("detailing-background.jpeg") center 42% / cover no-repeat;
+  opacity: 0.1;
+  pointer-events: none;
 }
 
 html {
@@ -659,13 +670,8 @@ img {
   right: max(18px, calc((100vw - 1240px) / 2));
   width: min(310px, calc(100vw - 36px));
   color: #202124;
-  animation: review-float 7s ease-in-out infinite;
-}
-
-@keyframes review-float {
-  0%, 100% { transform: translate(0, 0) rotate(-0.8deg); }
-  35% { transform: translate(-10px, 9px) rotate(0.6deg); }
-  70% { transform: translate(6px, 15px) rotate(-0.2deg); }
+  transform: rotate(-2deg);
+  transform-origin: top right;
 }
 
 .google-review-heading {
@@ -761,12 +767,6 @@ img {
 
 .google-review-dots button.active {
   background: #4285f4;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .google-review-float {
-    animation: none;
-  }
 }
 
 .service-meta {
