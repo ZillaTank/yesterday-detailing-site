@@ -15,6 +15,7 @@
 
     slides.forEach((slide, slideIndex) => {
       slide.classList.toggle("active", slideIndex === activeIndex);
+      slide.classList.toggle("next", slideIndex === (activeIndex + 1) % slides.length);
     });
 
     dots.forEach((dot, dotIndex) => {
@@ -42,6 +43,7 @@
   carousel.addEventListener("mouseleave", startRotation);
 
   slides[0].classList.add("active");
+  slides[1].classList.add("next");
   dots[0].classList.add("active");
   dots[0].setAttribute("aria-current", "true");
   startRotation();

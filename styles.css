@@ -658,13 +658,14 @@ img {
   top: 104px;
   right: max(18px, calc((100vw - 1240px) / 2));
   width: min(310px, calc(100vw - 36px));
-  padding: 15px 16px 12px;
   color: #202124;
-  background: rgba(255, 255, 255, 0.97);
-  border: 1px solid #dadce0;
-  border-radius: 12px;
-  box-shadow: 0 8px 26px rgba(60, 64, 67, 0.24);
-  backdrop-filter: blur(12px);
+  animation: review-float 7s ease-in-out infinite;
+}
+
+@keyframes review-float {
+  0%, 100% { transform: translate(0, 0) rotate(-0.8deg); }
+  35% { transform: translate(-10px, 9px) rotate(0.6deg); }
+  70% { transform: translate(6px, 15px) rotate(-0.2deg); }
 }
 
 .google-review-heading {
@@ -690,8 +691,9 @@ img {
 }
 
 .google-g {
-  color: #4285f4;
-  font: 900 1.8rem/1 Arial, sans-serif;
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
 }
 
 .google-stars {
@@ -701,44 +703,50 @@ img {
 
 .google-review-slides {
   position: relative;
-  min-height: 88px;
-  margin-top: 10px;
+  min-height: 154px;
 }
 
 .google-review-slide {
   position: absolute;
   inset: 0;
+  padding: 15px 16px;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(5px);
-  transition: opacity 240ms ease, transform 240ms ease, visibility 240ms ease;
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid #dadce0;
+  border-radius: 12px;
+  box-shadow: 0 8px 26px rgba(60, 64, 67, 0.24);
+  backdrop-filter: blur(12px);
+  transform: scale(0.94) translate(12px, 12px) rotate(2.2deg);
+  transform-origin: center;
+  transition: opacity 300ms ease, transform 360ms ease, visibility 300ms ease;
 }
 
 .google-review-slide.active {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  transform: scale(1) translate(0, 0) rotate(0deg);
+  z-index: 2;
+}
+
+.google-review-slide.next {
+  opacity: 0.82;
+  visibility: visible;
+  transform: scale(0.96) translate(12px, 11px) rotate(2.2deg);
+  z-index: 1;
 }
 
 .google-review-slide blockquote {
-  margin: 0;
+  margin: 12px 0 0;
   color: #3c4043;
   font-size: 0.8rem;
   line-height: 1.4;
 }
 
-.google-review-slide cite {
-  display: block;
-  margin-top: 6px;
-  color: #5f6368;
-  font-size: 0.74rem;
-  font-style: normal;
-  font-weight: 700;
-}
-
 .google-review-dots {
   display: flex;
   gap: 5px;
+  margin: 9px 0 0 16px;
 }
 
 .google-review-dots button {
@@ -753,6 +761,12 @@ img {
 
 .google-review-dots button.active {
   background: #4285f4;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .google-review-float {
+    animation: none;
+  }
 }
 
 .service-meta {
@@ -1910,8 +1924,6 @@ textarea {
     top: 106px;
     right: 10px;
     width: 238px;
-    padding: 10px 12px 9px;
-    border-radius: 10px;
   }
 
   .google-review-heading strong {
@@ -1919,22 +1931,22 @@ textarea {
   }
 
   .google-g {
-    font-size: 1.45rem;
+    width: 24px;
+    height: 24px;
   }
 
   .google-review-slides {
-    min-height: 75px;
-    margin-top: 7px;
+    min-height: 132px;
+  }
+
+  .google-review-slide {
+    padding: 12px 13px;
+    border-radius: 10px;
   }
 
   .google-review-slide blockquote {
     font-size: 0.72rem;
     line-height: 1.3;
-  }
-
-  .google-review-slide cite {
-    margin-top: 4px;
-    font-size: 0.68rem;
   }
 
   .google-review-dots button {
