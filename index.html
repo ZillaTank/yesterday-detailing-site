@@ -22,9 +22,9 @@
   <script>
     document.documentElement.dataset.theme = localStorage.getItem("yd-theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
   </script>
-  <link rel="stylesheet" href="styles.css?v=9">
+  <link rel="stylesheet" href="styles.css?v=10">
   <script src="theme.js" defer></script>
-  <script src="reviews.js" defer></script>
+  <script src="reviews.js?v=2" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -138,13 +138,6 @@
               <div class="google-review-heading"><svg class="google-g" aria-label="Google" viewBox="0 0 24 24" role="img"><use href="#google-g-mark"/></svg><span><strong>Jared</strong><small>5.0 <span class="google-stars" aria-label="5 out of 5 stars">★★★★★</span></small></span></div>
               <blockquote>“Easily one of the best detailers out there. Ayden was extremely professional.”</blockquote>
             </article>
-          </div>
-          <div class="google-review-dots" aria-label="Choose a review">
-            <button type="button" class="active" aria-label="Show review 1" data-review-dot></button>
-            <button type="button" aria-label="Show review 2" data-review-dot></button>
-            <button type="button" aria-label="Show review 3" data-review-dot></button>
-            <button type="button" aria-label="Show review 4" data-review-dot></button>
-            <button type="button" aria-label="Show review 5" data-review-dot></button>
           </div>
         </aside>
         <p class="service-meta">

@@ -749,26 +749,6 @@ img {
   line-height: 1.4;
 }
 
-.google-review-dots {
-  display: flex;
-  gap: 5px;
-  margin: 9px 0 0 16px;
-}
-
-.google-review-dots button {
-  width: 18px;
-  height: 4px;
-  padding: 0;
-  border: 0;
-  border-radius: 999px;
-  background: #dadce0;
-  cursor: pointer;
-}
-
-.google-review-dots button.active {
-  background: #4285f4;
-}
-
 .service-meta {
   display: flex;
   flex-wrap: wrap;
@@ -1803,35 +1783,6 @@ textarea {
     opacity: 0;
     visibility: hidden;
     transform: none;
-  }
-
-  .google-review-dots {
-    justify-content: center;
-    gap: 0;
-    margin: 4px 0 0;
-  }
-
-  .google-review-dots button {
-    width: 44px;
-    height: 44px;
-    background: transparent;
-    position: relative;
-  }
-
-  .google-review-dots button::after {
-    content: "";
-    position: absolute;
-    inset: 20px 10px;
-    border-radius: 999px;
-    background: #dadce0;
-  }
-
-  .google-review-dots button.active {
-    background: transparent;
-  }
-
-  .google-review-dots button.active::after {
-    background: #4285f4;
   }
 
   .nav-wrap {
